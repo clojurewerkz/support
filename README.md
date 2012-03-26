@@ -7,6 +7,7 @@ This is a yet another support/utility library, targeted at use cases in
  * [Neocons](https://github.com/michaelklishin/neocons)
  * [Elastisch](https://github.com/clojurewerkz/elastisch)
  * [Quartzite](https://github.com/michaelklishin/quartzite)
+ * [Validateur](https://github.com/michaelklishin/validateur)
  * [Crawlista](https://github.com/michaelklishin/crawlista)
  * [Urly](https://github.com/michaelklishin/urly)
  * [Money](https://github.com/clojurewerkz/money)
