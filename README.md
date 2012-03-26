@@ -24,8 +24,6 @@ ClojureWerkz Support is built from the ground up for Clojure 1.3 and up.
 
 ### The Most Recent Release
 
-### The Most Recent Release
-
 With Leiningen:
 
     [clojurewerkz/support "0.1.0-beta2"]
