@@ -8,8 +8,10 @@ This is a yet another support/utility library, targeted at use cases in
  * [Elastisch](https://github.com/clojurewerkz/elastisch)
  * [Quartzite](https://github.com/michaelklishin/quartzite)
  * [Validateur](https://github.com/michaelklishin/validateur)
- * [Crawlista](https://github.com/michaelklishin/crawlista)
  * [Urly](https://github.com/michaelklishin/urly)
+ * [Pantomime](https://github.com/michaelklishin/pantomime)
+ * [Mailer](https://github.com/clojurewerkz/mailer)
+ * [Crawlista](https://github.com/michaelklishin/crawlista)
  * [Money](https://github.com/clojurewerkz/money)
 
 and other projects under the Clojurewerkz umbrella.
@@ -27,14 +29,14 @@ ClojureWerkz Support is built from the ground up for Clojure 1.3 and up.
 
 With Leiningen:
 
-    [clojurewerkz/support "0.1.0-beta3"]
+    [clojurewerkz/support "0.1.0"]
 
 With Maven:
 
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>support</artifactId>
-      <version>0.1.0-beta3</version>
+      <version>0.1.0</version>
     </dependency>
 
 

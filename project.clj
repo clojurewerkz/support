@@ -1,4 +1,4 @@
-(defproject clojurewerkz/support "0.1.0-SNAPSHOT"
+(defproject clojurewerkz/support "0.1.0"
   :description "A support library ClojureWerkz projects (Langohr, Monger, Neocons, Elastisch, Quartzite, Money, etc) can rely on"
   :min-lein-version "2.0.0"  
   :url "http://github.com/clojurewerkz/support"
@@ -7,7 +7,7 @@
   :dependencies [[org.clojure/clojure "1.3.0"]
                  [com.google.guava/guava "11.0.1"]]
   :profiles { :dev { :resource-paths ["test/resources"] }
-              :1.4 { :dependencies [[org.clojure/clojure "1.4.0-beta5"]] } }
+              :1.4 { :dependencies [[org.clojure/clojure "1.4.0-beta6"]] } }
   :aliases { "all" ["with-profile" "dev:dev,1.4"] }
   :source-paths ["src/clojure"]  
   :java-source-paths ["src/java"]  
