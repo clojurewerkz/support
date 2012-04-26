@@ -29,14 +29,14 @@ ClojureWerkz Support is built from the ground up for Clojure 1.3 and up.
 
 With Leiningen:
 
-    [clojurewerkz/support "0.1.0"]
+    [clojurewerkz/support "0.2.0"]
 
 With Maven:
 
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>support</artifactId>
-      <version>0.1.0</version>
+      <version>0.2.0</version>
     </dependency>
 
 
@@ -46,7 +46,7 @@ If you are comfortable with using snapshots, snapshot artifacts are [released to
 
 With Leiningen:
 
-    [clojurewerkz/support "0.2.0-SNAPSHOT"]
+    [clojurewerkz/support "0.3.0-SNAPSHOT"]
 
 
 With Maven:
@@ -54,7 +54,7 @@ With Maven:
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>support</artifactId>
-      <version>0.2.0-SNAPSHOT</version>
+      <version>0.3.0-SNAPSHOT</version>
     </dependency>
 
 
