@@ -1,4 +1,14 @@
+## Changes between ClojureWerkz Support 0.2.0 and 0.3.0
+
+No changes yet.
+
+
 ## Changes between ClojureWerkz Support 0.1.0 and 0.2.0
+
+### clojure.data.json integration with Joda Time is now in Support
+
+clojure.data.json integration with Joda Time has been extracted from Monger, ClojureWerkz's [MongoDB Clojure client](https://github.com/michaelklishin/monger).
+To use it, simply require `clojurewerkz.support.json`.
 
 
 ## Changes between ClojureWerkz Support 0.1.0-beta3 and 0.1.0
