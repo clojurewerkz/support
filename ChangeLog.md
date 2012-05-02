@@ -1,6 +1,25 @@
-## Changes between ClojureWerkz Support 0.2.0 and 0.3.0
+## Changes between ClojureWerkz Support 0.3.0 and 0.4.0
 
 No changes yet.
+
+
+## Changes between ClojureWerkz Support 0.2.0 and 0.3.0
+
+### clojurewerkz.support.js extracted from Monger
+
+clojurewerkz.support.js namespace has been extracted from [Monger, a Clojure MongoDB library](http://clojuremongodb.info). It is a convenience
+function for loading JavaScript resources from JVM class path:
+
+``` clojure
+(ns my.app
+  (:require [clojurewerkz.support.js :as js]))
+
+;; loads mapreduce/mapper1.js from the class path
+(js/load-resource "mapreduce/mapper")
+
+;; the same but with file extension
+(js/load-resource "mapreduce/mapper1.js")
+```
 
 
 ## Changes between ClojureWerkz Support 0.1.0 and 0.2.0
