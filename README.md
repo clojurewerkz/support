@@ -5,6 +5,7 @@ This is a yet another support/utility library, targeted at use cases in
  * [Monger](https://github.com/michaelklishin/monger)
  * [Langohr](https://github.com/michaelklishin/langohr)
  * [Neocons](https://github.com/michaelklishin/neocons)
+ * [Welle](https://github.com/michaelklishin/welle)
  * [Elastisch](https://github.com/clojurewerkz/elastisch)
  * [Quartzite](https://github.com/michaelklishin/quartzite)
  * [Validateur](https://github.com/michaelklishin/validateur)
@@ -14,7 +15,7 @@ This is a yet another support/utility library, targeted at use cases in
  * [Crawlista](https://github.com/michaelklishin/crawlista)
  * [Money](https://github.com/clojurewerkz/money)
 
-and other projects under the Clojurewerkz umbrella.
+and other [Clojure libraries under the Clojurewerkz umbrella](http://clojurewerkz.org).
 
 
 ## Supported Clojure versions
@@ -29,32 +30,14 @@ ClojureWerkz Support is built from the ground up for Clojure 1.3 and up.
 
 With Leiningen:
 
-    [clojurewerkz/support "0.2.0"]
+    [clojurewerkz/support "0.3.0"]
 
 With Maven:
 
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>support</artifactId>
-      <version>0.2.0</version>
-    </dependency>
-
-
-### Snapshots
-
-If you are comfortable with using snapshots, snapshot artifacts are [released to Clojars](https://clojars.org/clojurewerkz/support) every few days.
-
-With Leiningen:
-
-    [clojurewerkz/support "0.3.0-SNAPSHOT"]
-
-
-With Maven:
-
-    <dependency>
-      <groupId>clojurewerkz</groupId>
-      <artifactId>support</artifactId>
-      <version>0.3.0-SNAPSHOT</version>
+      <version>0.3.0</version>
     </dependency>
 
 
