@@ -19,4 +19,8 @@
 (extend-protocol json/Write-JSON
   org.joda.time.DateTime
   (write-json [^DateTime object out escape-unicode?]
-    (json/write-json (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out escape-unicode?)))
+    (json/write-json (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out escape-unicode?))
+
+  java.util.Date
+  (write-json [^java.util.Date object out escape-unicode?]
+    (json/write-json (DateTime. object (DateTimeZone/UTC)) out escape-unicode?)))
