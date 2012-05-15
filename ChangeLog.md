@@ -1,6 +1,9 @@
 ## Changes between ClojureWerkz Support 0.3.0 and 0.4.0
 
-No changes yet.
+### clojurewerkz.support.math
+
+`clojurewerkz.support.math` is a new namespace with useful mathematical functions core Clojure
+and JDK do not provide.
 
 
 ## Changes between ClojureWerkz Support 0.2.0 and 0.3.0
