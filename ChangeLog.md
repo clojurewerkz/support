@@ -1,5 +1,15 @@
 ## Changes between ClojureWerkz Support 0.3.0 and 0.4.0
 
+### clojurewerkz.support.string/camelize
+
+`clojurewerkz.support.string/camelize` turns `snake_case` into `CamelCase`:
+
+```
+clojure       => Clojure
+special_guest => SpecialGuest
+```
+
+
 ### clojurewerkz.support.math
 
 `clojurewerkz.support.math` is a new namespace with useful mathematical functions core Clojure
