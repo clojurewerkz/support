@@ -16,3 +16,10 @@
          "Hello [...]"   "Hello World!" 11
          "Hello[...]"    "Hello World!" 10
          "He[...]"       "Hello World!" 7)))
+
+
+(deftest test-camelize
+  (are [a b] (is (= (s/camelize a) b))
+    "product"       "Product"
+    "special_guest" "SpecialGuest"
+    "area51_story"  "Area51Story"))
