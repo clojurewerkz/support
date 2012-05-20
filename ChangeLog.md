@@ -12,6 +12,20 @@
 This function was previous in `clojure.contrib.str-utils` in the old monolithic contrib.
 
 
+
+### clojurewerkz.support.string/underscore
+
+`clojurewerkz.support.string/underscore` turns `CamelCase` into `snake_case`:
+
+```
+Clojure         => clojure
+SpecialGuest    => special_guest
+SimpleXMLParser => simple_xml_parser
+Area51Story     => area51_story
+```
+
+
+
 ### clojurewerkz.support.string/camelize
 
 `clojurewerkz.support.string/camelize` turns `snake_case` into `CamelCase`:
