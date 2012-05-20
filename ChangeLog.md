@@ -1,5 +1,17 @@
 ## Changes between ClojureWerkz Support 0.3.0 and 0.4.0
 
+### clojurewerkz.support.re/re-gsub
+
+`clojurewerkz.support.re/re-gsub` works like [Ruby's String#gsub](http://www.ruby-doc.org/core-1.9.3/String.html):
+
+``` clojure
+(re/re-gsub #"world" "Clojure" "Hello, world") ;= "Hello, Clojure"
+(re/re-gsub #"_id$" "" "id_field_id") ;= "id_field"
+```
+
+This function was previous in `clojure.contrib.str-utils` in the old monolithic contrib.
+
+
 ### clojurewerkz.support.string/camelize
 
 `clojurewerkz.support.string/camelize` turns `snake_case` into `CamelCase`:
