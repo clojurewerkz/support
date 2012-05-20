@@ -23,3 +23,13 @@
     "product"       "Product"
     "special_guest" "SpecialGuest"
     "area51_story"  "Area51Story"))
+
+
+(deftest test-underscore
+  (are [a b] (is (= (s/underscore a) b))
+    "Area51Story"  "area51_story"
+    "Product"      "product"       
+    "SpecialGuest" "special_guest"
+    "PDFLoader"    "pdf_loader"
+    "lowercase"    "lowercase"
+    "SimpleXMLParser" "simple_xml_parser"))
