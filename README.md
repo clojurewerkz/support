@@ -30,14 +30,14 @@ ClojureWerkz Support is built from the ground up for Clojure 1.3 and up.
 
 With Leiningen:
 
-    [clojurewerkz/support "0.3.0"]
+    [clojurewerkz/support "0.4.0"]
 
 With Maven:
 
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>support</artifactId>
-      <version>0.3.0</version>
+      <version>0.4.0</version>
     </dependency>
 
 
