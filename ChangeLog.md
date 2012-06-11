@@ -1,6 +1,11 @@
 ## Changes between ClojureWerkz Support 0.4.0 and 0.5.0
 
-No changes yet.
+### New clojurewerkz.support.string functions
+
+Several new functions were extracted from [Crawlista](https://github.com/michaelklishin/crawlista):
+
+`clojurewerkz.support.string/maybe-prepend`, `clojurewerkz.support.string/maybe-append`, `clojurewerkz.support.string/maybe-chopl`,
+`clojurewerkz.support.string/maybe-chopr`, `clojurewerkz.support.string/hex-to-int`.
 
 
 
