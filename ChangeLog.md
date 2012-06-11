@@ -1,3 +1,9 @@
+## Changes between ClojureWerkz Support 0.5.0 and 0.6.0
+
+No changes yet.
+
+
+
 ## Changes between ClojureWerkz Support 0.4.0 and 0.5.0
 
 ### New clojurewerkz.support.string functions
