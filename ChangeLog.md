@@ -1,6 +1,8 @@
 ## Changes between ClojureWerkz Support 0.5.0 and 0.6.0
 
-No changes yet.
+### clojurewerkz.support.string/maybe-append no longer lowercases strings
+
+`clojurewerkz.support.string/maybe-append` no longer lowercases strings, same for `maybe-prepend`
 
 
 

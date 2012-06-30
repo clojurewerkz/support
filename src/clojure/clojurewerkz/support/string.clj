@@ -44,15 +44,15 @@
 
 (defn maybe-prepend
   [^String s ^String prefix]
-  (.toLowerCase (if (.startsWith (.toLowerCase s) (.toLowerCase prefix))
-                  s
-                  (str prefix s))))
+  (if (.startsWith (.toLowerCase s) (.toLowerCase prefix))
+    s
+    (str prefix s)))
 
 (defn maybe-append
   [^String s ^String suffix]
-  (.toLowerCase (if (.endsWith (.toLowerCase s) (.toLowerCase suffix))
-                  s
-                  (str s suffix))))
+  (if (.endsWith (.toLowerCase s) (.toLowerCase suffix))
+    s
+    (str s suffix)))
 
 (defn maybe-chopl
   [^String s ^String prefix]
@@ -70,6 +70,6 @@
 
 (defn hex-to-int
   [^String s]
-    (Long/parseLong (if (.startsWith s "0x")
-                      (subs s 2)
-                      s) 16))
+  (Long/parseLong (if (.startsWith s "0x")
+                    (subs s 2)
+                    s) 16))

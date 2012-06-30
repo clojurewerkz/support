@@ -37,12 +37,12 @@
 
 (deftest test-maybe-prepend
   (is (= "www.apple.com" (s/maybe-prepend "apple.com" "www.")))
-  (is (= "www.apple.com" (s/maybe-prepend "APPLE.com" "www.")))
+  (is (= "www.APPLE.com" (s/maybe-prepend "APPLE.com" "www.")))
   (is (= "www.apple.com" (s/maybe-prepend "www.apple.com" "www."))))
 
 (deftest test-maybe-append
   (is (= "apple.com"  (s/maybe-append "apple.com" ".com")))
-  (is (= "apple.com"  (s/maybe-append "APPLE.com" ".com")))
+  (is (= "APPLE.com"  (s/maybe-append "APPLE.com" ".com")))
   (is (= "google.com" (s/maybe-append "google" ".com"))))
 
 (deftest test-maybe-chopl
