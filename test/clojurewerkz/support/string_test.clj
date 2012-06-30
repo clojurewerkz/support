@@ -1,6 +1,7 @@
 (ns clojurewerkz.support.string-test
   (:require [clojurewerkz.support.string :as s])
-  (:use clojure.test))
+  (:use clojure.test)
+  (:import java.nio.ByteBuffer))
 
 (deftest test-truncate
   (testing "truncation without omission"
@@ -64,3 +65,8 @@
        "FF0000"   16711680
        "0x001100" 4352
        "001100"   4352))
+
+
+(deftest test-to-byte-buffer
+  (is (= (ByteBuffer/wrap (.getBytes "a string")) (s/to-byte-buffer "a string")))
+  (is (= (ByteBuffer/wrap (.getBytes "строка" "UTF-8")) (s/to-byte-buffer "строка" "UTF-8"))))

@@ -1,5 +1,6 @@
 (ns clojurewerkz.support.string
-  (:require [clojure.string :as s]))
+  (:require [clojure.string :as s])
+  (:import java.nio.ByteBuffer))
 
 ;;
 ;; Implementation
@@ -12,7 +13,7 @@
 ;; API
 ;;
 
-(defn truncate
+(defn ^String truncate
   ([^String s ^long length]
      (if (> length (count s))
        s
@@ -22,7 +23,7 @@
        (str (.substring s 0 length-with-room-for-omission) omission))))
 
 
-(defn camelize
+(defn ^String camelize
   "Turns snake_case into CamelCase:
 
    clojure       => Clojure
@@ -31,7 +32,7 @@
   (s/join (map s/capitalize (s/split s #"_"))))
 
 
-(defn underscore
+(defn ^String underscore
   "Turns CamelCase into snake_case:
 
    GL11Version     => gl11_version
@@ -42,26 +43,26 @@
     (s/join "_" (map #(.toLowerCase ^String %) xs))))
 
 
-(defn maybe-prepend
+(defn ^String maybe-prepend
   [^String s ^String prefix]
   (if (.startsWith (.toLowerCase s) (.toLowerCase prefix))
     s
     (str prefix s)))
 
-(defn maybe-append
+(defn ^String maybe-append
   [^String s ^String suffix]
   (if (.endsWith (.toLowerCase s) (.toLowerCase suffix))
     s
     (str s suffix)))
 
-(defn maybe-chopl
+(defn ^String maybe-chopl
   [^String s ^String prefix]
   (let [ls (.toLowerCase s)]
     (if (.startsWith ls prefix)
       (.replaceAll ls (str "^" prefix) "")
       s)))
 
-(defn maybe-chopr
+(defn ^String maybe-chopr
   [^String s ^String suffix]
   (let [ls (.toLowerCase s)]
     (if (.endsWith ls suffix)
@@ -73,3 +74,10 @@
   (Long/parseLong (if (.startsWith s "0x")
                     (subs s 2)
                     s) 16))
+
+(defn ^java.nio.ByteBuffer to-byte-buffer
+  "Wraps provided string into a NIO ByteBuffer"
+  ([^String s]
+     (ByteBuffer/wrap (.getBytes s "UTF-8")))
+  ([^String s ^String encoding]
+     (ByteBuffer/wrap (.getBytes s encoding))))
