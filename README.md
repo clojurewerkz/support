@@ -6,16 +6,17 @@ This is a yet another support/utility library, targeted at use cases in
  * [Langohr](https://github.com/michaelklishin/langohr)
  * [Neocons](https://github.com/michaelklishin/neocons)
  * [Welle](https://github.com/michaelklishin/welle)
+ * [Validateur](https://github.com/michaelklishin/validateur)
+ * [Cassaforte](https://github.com/clojurewerkz/cassaforte)
  * [Elastisch](https://github.com/clojurewerkz/elastisch)
  * [Quartzite](https://github.com/michaelklishin/quartzite)
- * [Validateur](https://github.com/michaelklishin/validateur)
  * [Urly](https://github.com/michaelklishin/urly)
  * [Pantomime](https://github.com/michaelklishin/pantomime)
  * [Mailer](https://github.com/clojurewerkz/mailer)
  * [Crawlista](https://github.com/michaelklishin/crawlista)
  * [Money](https://github.com/clojurewerkz/money)
 
-and other [Clojure libraries under the Clojurewerkz umbrella](http://clojurewerkz.org).
+and other [Clojure libraries](http://clojurewerkz.org) under the Clojurewerkz umbrella.
 
 
 ## Supported Clojure versions
@@ -43,9 +44,8 @@ With Maven:
 
 ## Usage
 
-ClojureWerkz Support is a very young library and until documentation guides are written,
-it may be challenging to use for anyone except the author. For code examples, see our test
-suite.
+ClojureWerkz Support is a young library and until documentation guides are written,
+it may be challenging to use for anyone except the author. For code examples, see our test suite.
 
 Once the library matures, we will update this document.
 
@@ -61,7 +61,7 @@ CI is hosted by [travis-ci.org](http://travis-ci.org)
 
 ## Development
 
-Neocons uses [Leiningen 2](https://github.com/technomancy/leiningen/blob/master/doc/TUTORIAL.md). Make sure you have it installed and then run tests
+Support uses [Leiningen 2](https://github.com/technomancy/leiningen/blob/master/doc/TUTORIAL.md). Make sure you have it installed and then run tests
 against all supported Clojure versions using
 
     lein2 all test
