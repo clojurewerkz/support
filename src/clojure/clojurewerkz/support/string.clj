@@ -81,3 +81,27 @@
      (ByteBuffer/wrap (.getBytes s "UTF-8")))
   ([^String s ^String encoding]
      (ByteBuffer/wrap (.getBytes s encoding))))
+
+(def ^{:const true}
+  interpolation-placeholder-pattern #"\?")
+
+(defn char-counter
+  "Returns a function that counts character occurences in a string"
+  [^Character ch]
+  (fn [^String s]
+    (count (filter (fn [c] (= ch c)) (map identity s)))))
+
+(def count-placeholders (char-counter \?))
+
+(defn interpolate-vals
+  "Replaces value placeholders (?) in the string with their respective positional values.
+
+   Examples:
+
+   (interpolate-vals \"X = ?\" [\"42\"]) ;= \"X = 42\""
+  [^String pattern values]
+  {:pre [(= (count-placeholders pattern) (count values))]}
+  (let [parts  (s/split pattern interpolation-placeholder-pattern)
+        [xs ys](split-at (count values) parts)
+        zs     (interleave xs values)]
+    (s/join (concat zs ys))))

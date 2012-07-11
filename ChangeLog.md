@@ -1,6 +1,13 @@
 ## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
-No changes yet.
+### clojurewerkz.support.string/interpolate-vals
+
+`clojurewerkz.support.string/interpolate-vals` is a new function that replaces value placeholders (?)
+in the string with their respective positional values:
+
+``` clojure
+(clojurewerkz.support.string/interpolate-vals "X = ?" ["42"]) ;= "X = 42"
+```
 
 
 

@@ -70,3 +70,21 @@
 (deftest test-to-byte-buffer
   (is (= (ByteBuffer/wrap (.getBytes "a string")) (s/to-byte-buffer "a string")))
   (is (= (ByteBuffer/wrap (.getBytes "строка" "UTF-8")) (s/to-byte-buffer "строка" "UTF-8"))))
+
+
+;; implementation detail
+(deftest test-count-placeholders
+  (are [s n] (is (= n (s/count-placeholders s)))
+    "?" 1
+    "? a ?" 2
+    "abc" 0
+    "?????" 5))
+
+(deftest test-interpolate-vals
+  (are [pattern values result] (is (= result (s/interpolate-vals pattern values)))
+    "abc" [] "abc"
+    "abc ?" ["def"] "abc def"
+    "abc ? xy ?" ["def" "z"] "abc def xy z"
+    "abc ? ? xyz" ["123" "456"] "abc 123 456 xyz"
+    "abc ?? xyz" ["123" "456"] "abc 123456 xyz"
+    "? interpolate" ["My name is"] "My name is interpolate"))
