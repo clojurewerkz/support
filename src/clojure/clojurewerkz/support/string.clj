@@ -105,3 +105,16 @@
         [xs ys](split-at (count values) parts)
         zs     (interleave xs values)]
     (s/join (concat zs ys))))
+
+(defn- interpolate-pair
+  [^String s [k v]]
+  (.replaceAll s (str k) (str v)))
+
+(defn interpolate-kv
+  "Replaces named placeholders (:name, :x, :age, etc) in the string with values of their respective keys in the provided map.
+
+   Examples:
+
+   (interpolate-kv \"X = :x\" {:x \"42\"}) ;= \"X = 42\""
+  [^String pattern m]
+  (reduce interpolate-pair pattern m))

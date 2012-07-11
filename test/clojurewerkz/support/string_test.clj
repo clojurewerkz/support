@@ -88,3 +88,13 @@
     "abc ? ? xyz" ["123" "456"] "abc 123 456 xyz"
     "abc ?? xyz" ["123" "456"] "abc 123456 xyz"
     "? interpolate" ["My name is"] "My name is interpolate"))
+
+(deftest test-interpolate-kv
+  (are [pattern values result] (is (= result (s/interpolate-kv pattern values)))
+    "abc" {} "abc"
+    "abc :val" {:val "def"} "abc def"
+    "abc :val :val :val" {:val "def"} "abc def def def"
+    "abc :a xy :b" {:a "def" :b "z"} "abc def xy z"
+    "abc :x :y xyz" {:x "123" :y "456"} "abc 123 456 xyz"
+    "abc :a:b xyz" {:a "123" :b "456"} "abc 123456 xyz"
+    ":prefix interpolate" {:prefix "My name is"} "My name is interpolate"))

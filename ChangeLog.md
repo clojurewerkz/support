@@ -9,6 +9,14 @@ in the string with their respective positional values:
 (clojurewerkz.support.string/interpolate-vals "X = ?" ["42"]) ;= "X = 42"
 ```
 
+### clojurewerkz.support.string/interpolate-kv
+
+`clojurewerkz.support.string/interpolate-kv` is a new function that replaces named placeholders (`:name`, `:x`, `:age`, etc) in the string with values of their respective keys in the provided map:
+
+``` clojure
+(interpolate-kv "X = :x and Y = :y" {:x "42" :y 53}) ;= "X = 42 and Y = 53"
+```
+
 
 
 ## Changes between ClojureWerkz Support 0.5.0 and 0.6.0
