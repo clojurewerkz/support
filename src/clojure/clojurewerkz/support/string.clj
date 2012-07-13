@@ -118,3 +118,11 @@
    (interpolate-kv \"X = :x\" {:x \"42\"}) ;= \"X = 42\""
   [^String pattern m]
   (reduce interpolate-pair pattern m))
+
+
+
+(defn from-byte-buffer
+  [^java.nio.ByteBuffer buf]
+  (let [ary (byte-array (.remaining buf))]
+    (.get buf ary)
+    (String. ^bytes ary)))

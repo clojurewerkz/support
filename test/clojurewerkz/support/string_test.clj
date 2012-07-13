@@ -98,3 +98,10 @@
     "abc :x :y xyz" {:x "123" :y "456"} "abc 123 456 xyz"
     "abc :a:b xyz" {:a "123" :b "456"} "abc 123456 xyz"
     ":prefix interpolate" {:prefix "My name is"} "My name is interpolate"))
+
+
+(deftest test-from-byte-buffer
+  (let [s   "a string"
+        buf (java.nio.ByteBuffer/wrap (.getBytes s "UTF-8"))
+        res (s/from-byte-buffer buf)]
+    (is (= s res))))
