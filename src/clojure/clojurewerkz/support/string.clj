@@ -125,5 +125,7 @@
   "Creates a new string from the contents of the provided NIO byte buffer"
   [^java.nio.ByteBuffer buf]
   (let [ary (byte-array (.remaining buf))]
+    (.mark buf)
     (.get buf ary)
+    (.reset buf)
     (String. ^bytes ary)))

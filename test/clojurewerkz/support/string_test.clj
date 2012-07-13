@@ -101,7 +101,10 @@
 
 
 (deftest test-from-byte-buffer
-  (let [s   "a string"
-        buf (java.nio.ByteBuffer/wrap (.getBytes s "UTF-8"))
-        res (s/from-byte-buffer buf)]
-    (is (= s res))))
+  (let [s    "a string"
+        buf  (java.nio.ByteBuffer/wrap (.getBytes s "UTF-8"))
+        ;; buffers are mutable, make sure the function is idempotent
+        res1 (s/from-byte-buffer buf)
+        res2 (s/from-byte-buffer buf)
+        res3 (s/from-byte-buffer buf)]
+    (is (= s res1 res2 res3))))
