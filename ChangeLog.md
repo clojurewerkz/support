@@ -1,5 +1,11 @@
 ## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
+### clojurewerkz.support.string/from-byte-buffer
+
+`clojurewerkz.support.string/from-byte-buffer` is a new convention function that produces strings from
+[java.nio.ByteBuffer](http://docs.oracle.com/javase/7/docs/api/java/nio/ByteBuffer.html) instances.
+
+
 ### clojurewerkz.support.string/interpolate-vals
 
 `clojurewerkz.support.string/interpolate-vals` is a new function that replaces value placeholders (?)
