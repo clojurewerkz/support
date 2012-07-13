@@ -122,6 +122,7 @@
 
 
 (defn from-byte-buffer
+  "Creates a new string from the contents of the provided NIO byte buffer"
   [^java.nio.ByteBuffer buf]
   (let [ary (byte-array (.remaining buf))]
     (.get buf ary)
