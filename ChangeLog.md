@@ -1,3 +1,19 @@
+## Changes between ClojureWerkz Support 0.7.0 and 0.8.0
+
+### clojurewerkz.support.testing/when-not-ci
+
+`clojurewerkz.support.testing/when-not-ci` is a macro that evalutes provided forms if the
+`CI` env variable is not set:
+
+``` clojure
+(when-not-ci
+  (deftest test-something
+    ;; do something that only can be tested in the local environment
+    ;; but not on travis-ci.org and so on
+    (is (= 1 2)))
+```
+
+
 ## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
 ### clojurewerkz.support.string/from-byte-buffer
