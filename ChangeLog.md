@@ -1,4 +1,4 @@
-## Changes between ClojureWerkz Support 0.7.0 and 0.8.0
+## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
 ### clojurewerkz.support.testing/when-not-ci
 
@@ -13,8 +13,6 @@
     (is (= 1 2)))
 ```
 
-
-## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
 ### clojurewerkz.support.string/from-byte-buffer
 
