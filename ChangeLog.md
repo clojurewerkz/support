@@ -1,5 +1,24 @@
 ## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
+### clojurewerkz.support.hashing
+
+`clojurewerkz.support.hashing` is a new namespace with convenient hashing functions based on Guava hashing
+utilities:
+
+``` clojure
+(require '[clojurewerkz.support.hashing :as h])
+
+(h/sha1-of "clojure") ;= a HashCode instance, use clojure.core/str or .asBytes or .asLong
+(h/sha1-of 127273277) ;= a HashCode instance
+(h/sha1-of (.getBytes "clojure") ;= a HashCode instance
+
+;; etc
+(h/md5-of "hashing")
+(h/md5-of 1287272777)
+(h/md5-of a-byte-array)
+```
+
+
 ### clojurewerkz.support.core/pairs->map, clojurewerkz.support.core/map->pairs
 
 `clojurewerkz.support.core/pairs->map` and `clojurewerkz.support.core/map->pairs` are functions that convert
