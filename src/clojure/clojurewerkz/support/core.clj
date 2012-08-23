@@ -32,3 +32,8 @@
   [xs]
   (reduce (fn [acc [k v]] (assoc acc k v))
           {} xs))
+
+(defn map->pairs
+  "Converts a map into a vector of pairs (e.g. [[:a 10] [:b 20]])"
+  [m]
+  (vec m))
