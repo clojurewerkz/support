@@ -20,3 +20,14 @@
          f {:a 1 :zomg-keyword -1 "zomg-string" -2 :s "a string"} #"zomg.*" {:zomg-keyword -100, :a 1, "zomg-string" -200, :s "a string"}
          f {} #"zomg.*" {}
          f {:a 1 :b 2 "three" 4} #"zomg.*" {:a 1 :b 2 "three" 4})))
+
+
+(deftest test-pairs->map
+  (let [pairs [[:a 10] [:b 20] [:c 3] [:d 40]]]
+    (is (= {:a 10 :b 20 :c 3 :d 40} (pairs->map pairs))))
+  (let [pairs [[:a 10] [:a 20]]]
+    (is (= {:a 20} (pairs->map pairs))))
+  (let [pairs [[:a 10] [:a 0]]]
+    (is (= {:a 0} (pairs->map pairs))))
+  (let [pairs []]
+    (is (= {} (pairs->map pairs)))))

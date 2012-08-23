@@ -1,5 +1,19 @@
 ## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
+### clojurewerkz.support.core/pairs->map, clojurewerkz.support.core/map->pairs
+
+`clojurewerkz.support.core/pairs->map` and `clojurewerkz.support.core/map->pairs` are functions that convert
+Clojure maps to vectors of pairs and vice versa:
+
+``` clojure
+(require '[clojurewerkz.support.core :as c])
+
+(c/pairs->map [[:a 1] [:b 2] [:c 3]]) ;= {:a 1 :b 2 :c 3}
+(c/map->pairs {:a 1 :b 2 :c 3}) ;= [[:a 1] [:b 2] [:c 3]]
+```
+
+
+
 ### clojurewerkz.support.testing/when-not-ci
 
 `clojurewerkz.support.testing/when-not-ci` is a macro that evalutes provided forms if the

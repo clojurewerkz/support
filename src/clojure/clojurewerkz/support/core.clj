@@ -25,3 +25,10 @@
              [k (if (re-seq pattern (name k))
                   (f v)
                   v)])))
+
+
+(defn pairs->map
+  "Converts a sequence of pairs (e.g. [:a 10]) into a map"
+  [xs]
+  (reduce (fn [acc [k v]] (assoc acc k v))
+          {} xs))
