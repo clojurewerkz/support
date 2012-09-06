@@ -1,3 +1,8 @@
+## Changes between ClojureWerkz Support 0.7.0 and 0.8.0
+
+No changes yet.
+
+
 ## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
 ### Cheshire Support
