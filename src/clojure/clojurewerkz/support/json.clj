@@ -9,18 +9,25 @@
 
 (ns clojurewerkz.support.json
   (:import [org.joda.time DateTime DateTimeZone ReadableInstant]
-           [org.joda.time.format ISODateTimeFormat])
-  (:require [clojure.data.json :as json]))
+           [org.joda.time.format ISODateTimeFormat]))
 
 ;;
 ;; API
 ;;
 
-(extend-protocol json/Write-JSON
-  org.joda.time.DateTime
-  (write-json [^DateTime object out escape-unicode?]
-    (json/write-json (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out escape-unicode?))
+(try
+  (require 'clojure.data.json)
+  (catch Throwable t
+    false))
 
-  java.util.Date
-  (write-json [^java.util.Date object out escape-unicode?]
-    (json/write-json (DateTime. object (DateTimeZone/UTC)) out escape-unicode?)))
+(try
+  (extend-protocol clojure.data.json/Write-JSON
+    org.joda.time.DateTime
+    (write-json [^DateTime object out escape-unicode?]
+      (clojure.data.json/write-json (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out escape-unicode?))
+
+    java.util.Date
+    (write-json [^java.util.Date object out escape-unicode?]
+      (clojure.data.json/write-json (DateTime. object (DateTimeZone/UTC)) out escape-unicode?)))
+  (catch Throwable t
+    false))
