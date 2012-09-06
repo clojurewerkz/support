@@ -31,3 +31,16 @@
       (clojure.data.json/write-json (DateTime. object (DateTimeZone/UTC)) out escape-unicode?)))
   (catch Throwable t
     false))
+
+
+(try
+  (require 'cheshire.custom)
+  (catch Throwable t
+    false))
+
+(try
+  (cheshire.custom/add-encoder DateTime
+                               (fn [^DateTime dt ^com.fasterxml.jackson.core.json.WriterBasedJsonGenerator generator]
+                                 (.writeString generator (.print (ISODateTimeFormat/dateTime) ^ReadableInstant dt))))
+  (catch Throwable t
+    false))
