@@ -1,9 +1,9 @@
 (ns clojurewerkz.support.json-test
-  (:use clojure.test
-        clojurewerkz.support.json)
+  (:use clojure.test)
   (:require [clojure.data.json :as json]
             [cheshire.custom   :as json2]
-            [clj-time.core     :as t]))
+            [clj-time.core     :as t]
+            clojurewerkz.support.json))
 
 
 (deftest serialization-of-joda-datetime-to-json
