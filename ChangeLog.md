@@ -1,5 +1,11 @@
 ## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
+### Cheshire Support
+
+`clojurewerkz.support.json` will now use [Cheshire](https://github.com/dakrone/cheshire) if it is available. [clojure.data.json](https://github.com/clojure/data.json)
+is no longer a hard dependency (but still supported if available).
+
+
 ### Guava 13
 
 Support now depends on Guava version `13.0`.
