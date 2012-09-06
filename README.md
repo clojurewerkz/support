@@ -21,7 +21,8 @@ and other [Clojure libraries](http://clojurewerkz.org) under the Clojurewerkz um
 
 ## Supported Clojure versions
 
-ClojureWerkz Support is built from the ground up for Clojure 1.3 and up.
+ClojureWerkz Support is built from the ground up for Clojure 1.3 and up. Clojure 1.4 is
+highly recommended.
 
 
 
@@ -31,14 +32,14 @@ ClojureWerkz Support is built from the ground up for Clojure 1.3 and up.
 
 With Leiningen:
 
-    [clojurewerkz/support "0.6.0"]
+    [clojurewerkz/support "0.7.0"]
 
 With Maven:
 
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>support</artifactId>
-      <version>0.6.0</version>
+      <version>0.7.0</version>
     </dependency>
 
 
