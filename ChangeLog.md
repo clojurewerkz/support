@@ -1,5 +1,18 @@
 ## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
 
+### Guava 13
+
+Support now depends on Guava version `13.0`.
+
+
+### Clojure 1.4 By Default
+
+Support now depends on `org.clojure/clojure` version `1.4.0`. It is still compatible with Clojure 1.3 and if your `project.clj` depends
+on 1.3, it will be used, but 1.4 is the default now.
+
+We encourage all users to upgrade to 1.4, it is a drop-in replacement for the majority of projects out there.
+
+
 ### clojurewerkz.support.hashing
 
 `clojurewerkz.support.hashing` is a new namespace with convenient hashing functions based on Guava hashing
