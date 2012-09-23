@@ -9,7 +9,7 @@
   :profiles {:dev {:resource-paths ["test/resources"]
                    :dependencies   [[org.clojure/data.json "0.1.2"]
                                     [clj-time              "0.4.4"]
-                                    [cheshire              "4.0.2"]]}
+                                    [cheshire              "4.0.3"]]}
              :1.3 {:dependencies [[org.clojure/clojure "1.3.0"]]}
              :1.5 {:dependencies [[org.clojure/clojure "1.5.0-master-SNAPSHOT"]]}}
   :repositories {"sonatype" {:url "http://oss.sonatype.org/content/repositories/releases"
