@@ -1,6 +1,9 @@
 ## Changes between ClojureWerkz Support 0.7.0 and 0.8.0
 
-No changes yet.
+### More Robust clojurewerkz.support.json Compilation
+
+`clojurewerkz.support.json` will no longer fail to compile when `clojure.data.json` is not
+available.
 
 
 ## Changes between ClojureWerkz Support 0.6.0 and 0.7.0
