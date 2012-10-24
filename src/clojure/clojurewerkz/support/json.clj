@@ -11,6 +11,20 @@
   (:import [org.joda.time DateTime DateTimeZone ReadableInstant]
            [org.joda.time.format ISODateTimeFormat]))
 
+;; copied from clojure.reducers
+(defmacro ^:private compile-if
+  "Evaluate `exp` and if it returns logical true and doesn't error, expand to
+  `then`.  Else expand to `else`.
+
+  (compile-if (Class/forName \"java.util.concurrent.ForkJoinTask\")
+    (do-cool-stuff-with-fork-join)
+    (fall-back-to-executor-services))"
+  [exp then else]
+  (if (try (eval exp)
+           (catch Throwable _ false))
+    `(do ~then)
+    `(do ~else)))
+
 ;;
 ;; API
 ;;
@@ -20,17 +34,16 @@
   (catch Throwable t
     false))
 
-(try
-  (extend-protocol clojure.data.json/Write-JSON
-    org.joda.time.DateTime
-    (write-json [^DateTime object out escape-unicode?]
-      (clojure.data.json/write-json (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out escape-unicode?))
+(compile-if (find-ns 'clojure.data.json)
+            (extend-protocol clojure.data.json/Write-JSON
+              org.joda.time.DateTime
+              (write-json [^DateTime object out escape-unicode?]
+                (clojure.data.json/write-json (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out escape-unicode?))
 
-    java.util.Date
-    (write-json [^java.util.Date object out escape-unicode?]
-      (clojure.data.json/write-json (DateTime. object (DateTimeZone/UTC)) out escape-unicode?)))
-  (catch Throwable t
-    false))
+              java.util.Date
+              (write-json [^java.util.Date object out escape-unicode?]
+                (clojure.data.json/write-json (DateTime. object (DateTimeZone/UTC)) out escape-unicode?)))
+            (comment "Nothing to do, clojure.data.json is not available"))
 
 
 (try
