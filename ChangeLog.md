@@ -1,3 +1,15 @@
+## Changes between ClojureWerkz Support 0.8.0 and 0.9.0
+
+`clojurewerkz.support.json` now supports
+
+ * Cheshire
+ * `clojure.data.json` `0.2.0+`
+ * `clojure.data.json` `0.1.2`
+
+(whichever is available will be extended to support MongoDB data types
+and JodaTime date/time types).
+
+
 ## Changes between ClojureWerkz Support 0.7.0 and 0.8.0
 
 ### More Robust clojurewerkz.support.json Compilation

@@ -34,15 +34,39 @@
   (catch Throwable t
     false))
 
-(compile-if (find-ns 'clojure.data.json)
-            (extend-protocol clojure.data.json/Write-JSON
-              org.joda.time.DateTime
-              (write-json [^DateTime object out escape-unicode?]
-                (clojure.data.json/write-json (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out escape-unicode?))
 
-              java.util.Date
-              (write-json [^java.util.Date object out escape-unicode?]
-                (clojure.data.json/write-json (DateTime. object (DateTimeZone/UTC)) out escape-unicode?)))
+;; all this madness would not be necessary if some people cared about backwards
+;; compatiblity of the libraries they maintain. Shame on the clojure.data.json maintainer. MK.
+(compile-if (and (find-ns 'clojure.data.json)
+                 clojure.data.json/JSONWriter)
+            (try
+              ;; now try extending clojure.data.json 0.2.x protocol
+              (extend-protocol clojure.data.json/JSONWriter
+                org.joda.time.DateTime
+                (write [^DateTime object out]
+                  (clojure.data.json/write (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out))
+
+                java.util.Date
+                (write-json [^java.util.Date object out]
+                  (clojure.data.json/write (DateTime. object (DateTimeZone/UTC)) out)))
+              (catch Throwable _
+                false))
+            (comment "Nothing to do, clojure.data.json is not available"))
+
+(compile-if (and (find-ns 'clojure.data.json)
+                 clojure.data.json/Write-JSON)
+            ;; try extending clojure.data.json 0.1.x protocol
+            (try
+              (extend-protocol clojure.data.json/Write-JSON
+                org.joda.time.DateTime
+                (write-json [^DateTime object out escape-unicode?]
+                  (clojure.data.json/write-json (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out escape-unicode?))
+
+                java.util.Date
+                (write-json [^java.util.Date object out escape-unicode?]
+                  (clojure.data.json/write-json (DateTime. object (DateTimeZone/UTC)) out escape-unicode?)))
+              (catch Throwable _
+                false))
             (comment "Nothing to do, clojure.data.json is not available"))
 
 

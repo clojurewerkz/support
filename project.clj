@@ -9,15 +9,17 @@
   :profiles {:dev {:resource-paths ["test/resources"]
                    :dependencies   [[clj-time              "0.4.4"]
                                     [cheshire              "4.0.3"]]}
-             :1.3 {:dependencies [[org.clojure/clojure "1.3.0"]]}
-             :1.5 {:dependencies [[org.clojure/clojure "1.5.0-master-SNAPSHOT"]]}}
+             :1.3    {:dependencies [[org.clojure/clojure "1.3.0"]]}
+             :1.5    {:dependencies [[org.clojure/clojure "1.5.0-master-SNAPSHOT"]]}
+             :cdj01x {:dependencies [[org.clojure/data.json "0.1.2"]]}
+             :cdj02x {:dependencies [[org.clojure/data.json "0.2.0"]]}}
   :repositories {"sonatype" {:url "http://oss.sonatype.org/content/repositories/releases"
                              :snapshots false
                              :releases {:checksum :fail :update :always}}
                  "sonatype-snapshots" {:url "http://oss.sonatype.org/content/repositories/snapshots"
                              :snapshots true
                              :releases {:checksum :fail :update :always}}}
-  :aliases {"all" ["with-profile" "dev:dev,1.3:dev,1.5"]}
+  :aliases {"all" ["with-profile" "dev:dev,1.3:dev,1.5:dev,cdj01x:dev,cdj02x"]}
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
   :warn-on-reflection true)
