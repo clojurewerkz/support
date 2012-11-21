@@ -1,6 +1,6 @@
 ## Changes between ClojureWerkz Support 0.9.0 and 0.10.0
 
-No changes yet.
+`clojurewerkz.support.json` will now assume [Cheshire](https://github.com/dakrone/cheshire) `5.0`.
 
 
 

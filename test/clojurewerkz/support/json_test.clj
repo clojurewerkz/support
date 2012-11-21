@@ -1,6 +1,6 @@
 (ns clojurewerkz.support.json-test
   (:use clojure.test)
-  (:require [cheshire.custom   :as json]
+  (:require [cheshire.core     :as json]
             [clj-time.core     :as t]
             clojurewerkz.support.json))
 
