@@ -1,3 +1,11 @@
+## Changes between ClojureWerkz Support 0.10.0 and 0.11.0
+
+### (Basic) URL Encoding For HTTP API Consumers
+
+`clojurewerkz.support.url/url-encode` is a convenience function for HTTP API clients
+that works around the fact that [different URI parts are encoded differently](http://www.lunatech-research.com/archives/2009/02/03/what-every-web-developer-must-know-about-url-encoding#Thereservedcharactersaredifferentforeachpart).
+
+
 ## Changes between ClojureWerkz Support 0.9.0 and 0.10.0
 
 `clojurewerkz.support.json` will now assume [Cheshire](https://github.com/dakrone/cheshire) `5.0`.
