@@ -1,3 +1,12 @@
+## Changes between ClojureWerkz Support 0.11.0 and 0.12.0
+
+### (Basic) URL Encoding For HTTP API Consumers is Removed
+
+`clojurewerkz.support.url` is removed. It turned out to not be feature complete
+enough for some applications. Use [Urly](http://github.com/michaelklishin/urly)
+or similar libraries instead.
+
+
 ## Changes between ClojureWerkz Support 0.10.0 and 0.11.0
 
 ### (Basic) URL Encoding For HTTP API Consumers
