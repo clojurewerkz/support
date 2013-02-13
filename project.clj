@@ -10,7 +10,7 @@
                    :dependencies   [[clj-time              "0.4.4"]
                                     [cheshire              "5.0.0"]]}
              :1.3    {:dependencies [[org.clojure/clojure "1.3.0"]]}
-             :1.5    {:dependencies [[org.clojure/clojure "1.5.0-RC4"]]}
+             :1.5    {:dependencies [[org.clojure/clojure "1.5.0-RC15"]]}
              :cdj01x {:dependencies [[org.clojure/data.json "0.1.2"]]}
              :cdj02x {:dependencies [[org.clojure/data.json "0.2.1"]]}}
   :repositories {"sonatype" {:url "http://oss.sonatype.org/content/repositories/releases"
