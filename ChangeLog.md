@@ -1,5 +1,12 @@
 ## Changes between ClojureWerkz Support 0.12.0 and 0.13.0
 
+### clojurewerkz.support.io
+
+`clojurewerkz.support.io/create-temp-dir` is a new function that
+creates temporary directories. It returns `java.io.File` instances
+and currently takes no arguments.
+
+
 ### Guava 14
 
 Support now depends on Guava version `14.0-rc2`.
