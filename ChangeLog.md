@@ -1,3 +1,10 @@
+## Changes between ClojureWerkz Support 0.12.0 and 0.13.0
+
+### Guava 14
+
+Support now depends on Guava version `14.0-rc2`.
+
+
 ## Changes between ClojureWerkz Support 0.11.0 and 0.12.0
 
 ### (Basic) URL Encoding For HTTP API Consumers is Removed
