@@ -8,7 +8,7 @@
                  [com.google.guava/guava "14.0-rc2"]]
   :profiles {:dev {:resource-paths ["test/resources"]
                    :dependencies   [[clj-time              "0.4.4"]
-                                    [cheshire              "5.0.0"]]}
+                                    [cheshire              "5.0.2"]]}
              :1.3    {:dependencies [[org.clojure/clojure "1.3.0"]]}
              :1.5    {:dependencies [[org.clojure/clojure "1.5.0-RC16"]]}
              :cdj01x {:dependencies [[org.clojure/data.json "0.1.2"]]}
