@@ -7,7 +7,7 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [com.google.guava/guava "14.0.1"]]
   :profiles {:dev {:resource-paths ["test/resources"]
-                   :dependencies   [[clj-time              "0.4.4"]
+                   :dependencies   [[clj-time              "0.4.5"]
                                     [cheshire              "5.0.2"]]}
              :1.3    {:dependencies [[org.clojure/clojure "1.3.0"]]}
              :1.5    {:dependencies [[org.clojure/clojure "1.5.0-RC16"]]}
