@@ -1,6 +1,17 @@
 ## Changes between ClojureWerkz Support 0.14.0 and 0.15.0
 
-No changes yet.
+### Clojure 1.4 By Default
+
+Support now depends on `org.clojure/clojure` version `1.5.1`. It is
+still compatible with Clojure 1.3+ and if your `project.clj` depends on
+a different version, it will be used, but 1.5 is the default now.
+
+We encourage all users to upgrade to 1.5, it is a drop-in replacement
+for the majority of projects out there.
+
+### Guava 14.0.1
+
+Support now depends on Guava version `14.0.1`.
 
 
 ## Changes between ClojureWerkz Support 0.13.0 and 0.14.0
