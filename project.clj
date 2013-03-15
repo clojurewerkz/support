@@ -10,7 +10,9 @@
                    :dependencies   [[clj-time              "0.4.5"]
                                     [cheshire              "5.0.2"]]}
              :1.3    {:dependencies [[org.clojure/clojure "1.3.0"]]}
-             :1.5    {:dependencies [[org.clojure/clojure "1.5.0-RC16"]]}
+             :1.4    {:dependencies [[org.clojure/clojure "1.4.0"]]}
+             :1.6    {:dependencies [[org.clojure/clojure "1.6.0-master-SNAPSHOT"]]}
+             :master {:dependencies [[org.clojure/clojure "1.6.0-master-SNAPSHOT"]]}
              :cdj01x {:dependencies [[org.clojure/data.json "0.1.2"]]}
              :cdj02x {:dependencies [[org.clojure/data.json "0.2.1"]]}}
   :repositories {"sonatype" {:url "http://oss.sonatype.org/content/repositories/releases"
@@ -19,7 +21,7 @@
                  "sonatype-snapshots" {:url "http://oss.sonatype.org/content/repositories/snapshots"
                              :snapshots true
                              :releases {:checksum :fail :update :always}}}
-  :aliases {"all" ["with-profile" "dev:dev,1.3:dev,1.5:dev,cdj01x:dev,cdj02x"]}
+  :aliases {"all" ["with-profile" "dev:dev,1.3:dev,1.4:dev,1.6:dev,master:dev,cdj01x:dev,cdj02x"]}
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
   :warn-on-reflection true)
