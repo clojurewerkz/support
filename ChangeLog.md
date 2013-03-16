@@ -1,6 +1,11 @@
+## Changes between ClojureWerkz Support 0.15.0 and 0.16.0
+
+No changes yet.
+
+
 ## Changes between ClojureWerkz Support 0.14.0 and 0.15.0
 
-### Clojure 1.4 By Default
+### Clojure 1.5 By Default
 
 Support now depends on `org.clojure/clojure` version `1.5.1`. It is
 still compatible with Clojure 1.3+ and if your `project.clj` depends on
