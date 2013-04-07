@@ -1,6 +1,8 @@
 ## Changes between ClojureWerkz Support 0.15.0 and 0.16.0
 
-No changes yet.
+### Cheshire Update
+
+[Cheshire](https://github.com/dakrone/cheshire/) dependency has been upgraded to version `5.1.0`.
 
 
 ## Changes between ClojureWerkz Support 0.14.0 and 0.15.0
