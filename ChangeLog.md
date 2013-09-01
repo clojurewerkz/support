@@ -1,3 +1,12 @@
+## Changes between ClojureWerkz Support 0.16.0 and 0.17.0
+
+### Cheshire Update
+
+[Cheshire](https://github.com/dakrone/cheshire/) dependency has been upgraded to version `5.2.0`.
+
+In addition, Support no longer uses deprecated namespaces in Cheshire.
+
+
 ## Changes between ClojureWerkz Support 0.15.0 and 0.16.0
 
 ### Cheshire Update
