@@ -1,3 +1,12 @@
+## Changes between ClojureWerkz Support 0.17.0 and 0.18.0
+
+### Char Array Type
+
+`clojurewerkz.support.internal/char-array-type` is a new var that returns
+`char[]` type that can be used to extend protocols.
+
+
+
 ## Changes between ClojureWerkz Support 0.16.0 and 0.17.0
 
 ### Cheshire Update
