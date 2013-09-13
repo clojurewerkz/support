@@ -3,16 +3,16 @@
 
 
 (defprotocol ByteSource
-  (to-bytes [input] "Converts the input to a byte array"))
+  (to-byte-array [input] "Converts the input to a byte array"))
 
 (extend-protocol ByteSource
   String
-  (to-bytes [^String input]
+  (to-byte-array [^String input]
     (.getBytes input "UTF-8")))
 
 (extend i/byte-array-type
   ByteSource
-  {:to-bytes identity})
+  {:to-byte-array identity})
 
 (extend nil
   ByteSource
