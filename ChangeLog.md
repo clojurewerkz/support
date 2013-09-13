@@ -1,3 +1,20 @@
+## Changes between ClojureWerkz Support 0.18.0 and 0.19.0
+
+### Char and Byte Sources
+
+`clojurewerkz.support.bytes/ByteSource` and
+`clojurewerkz.support.chars/CharSource` are two new protocols
+extracted from various ClojureWerkz projects.
+
+They provide `clojurewerkz.support.bytes/to-byte-array` and
+`clojurewerkz.support.bytes/to-char-array` functions that
+produce char arrays (`char[]`) and byte arrays (`byte[]`)
+from the input.
+
+Default implementations are provided for strings, char arrays
+and byte arrays (respectively).
+
+
 ## Changes between ClojureWerkz Support 0.17.0 and 0.18.0
 
 ### Char Array Type
