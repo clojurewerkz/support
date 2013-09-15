@@ -1,3 +1,11 @@
+## Changes between ClojureWerkz Support 0.19.0 and 0.20.0
+
+### ByteSource Implementation Fixed For nil
+
+`clojurewerkz.support.bytes/ByteSource` implementation is fixed for
+`nil` values.
+
+
 ## Changes between ClojureWerkz Support 0.18.0 and 0.19.0
 
 ### Char and Byte Sources
