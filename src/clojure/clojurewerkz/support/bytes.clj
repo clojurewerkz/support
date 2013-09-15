@@ -16,4 +16,4 @@
 
 (extend nil
   ByteSource
-  {:to-char-array (constantly nil)})
+  {:to-byte-array (constantly nil)})
