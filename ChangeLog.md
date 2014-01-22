@@ -4,9 +4,9 @@
 
 ClojureWerkz Support no longer supports Clojure 1.3.
 
-### Guava 16.0.0
+### Guava 16.0
 
-Support now depends on Guava version `16.0.0`.
+Support now depends on Guava version `16.0`.
 
 ### Cheshire Update
 
