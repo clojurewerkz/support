@@ -1,3 +1,14 @@
+## Changes between ClojureWerkz Support 0.20.0 and 0.21.0
+
+### Guava 16.0.0
+
+Support now depends on Guava version `16.0.0`.
+
+### Cheshire Update
+
+[Cheshire](https://github.com/dakrone/cheshire/) dependency has been upgraded to version `5.3.0`.
+
+
 ## Changes between ClojureWerkz Support 0.19.0 and 0.20.0
 
 ### ByteSource Implementation Fixed For nil
