@@ -1,5 +1,9 @@
 ## Changes between ClojureWerkz Support 0.20.0 and 0.21.0
 
+### Clojure 1.3 Support Dropped
+
+ClojureWerkz Support no longer supports Clojure 1.3.
+
 ### Guava 16.0.0
 
 Support now depends on Guava version `16.0.0`.
