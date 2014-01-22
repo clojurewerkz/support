@@ -13,7 +13,7 @@
              :1.6    {:dependencies [[org.clojure/clojure "1.6.0-master-SNAPSHOT"]]}
              :master {:dependencies [[org.clojure/clojure "1.6.0-master-SNAPSHOT"]]}
              :cdj01x {:dependencies [[org.clojure/data.json "0.1.2"]]}
-             :cdj02x {:dependencies [[org.clojure/data.json "0.2.1"]]}}
+             :cdj02x {:dependencies [[org.clojure/data.json "0.2.4"]]}}
   :repositories {"sonatype" {:url "http://oss.sonatype.org/content/repositories/releases"
                              :snapshots false
                              :releases {:checksum :fail :update :always}}
