@@ -11,7 +11,7 @@
                                     [cheshire              "5.3.0"]]}
              :1.4    {:dependencies [[org.clojure/clojure "1.4.0"]]}
              :1.6    {:dependencies [[org.clojure/clojure "1.6.0"]]}
-             :master {:dependencies [[org.clojure/clojure "1.6.0-master-SNAPSHOT"]]}
+             :master {:dependencies [[org.clojure/clojure "1.7.0-master-SNAPSHOT"]]}
              :cdj01x {:dependencies [[org.clojure/data.json "0.1.2"]]}
              :cdj02x {:dependencies [[org.clojure/data.json "0.2.4"]]}}
   :repositories {"sonatype" {:url "http://oss.sonatype.org/content/repositories/releases"
