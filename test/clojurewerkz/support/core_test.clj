@@ -33,5 +33,5 @@
     (is (= {} (pairs->map pairs)))))
 
 (deftest test-map->pairs
-  (let [m {:a 1 :b 2}]
+  (let [m (array-map :a 1 :b 2)]
     (is (= [[:a 1] [:b 2]] (map->pairs m)))))
