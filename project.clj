@@ -20,7 +20,7 @@
                  "sonatype-snapshots" {:url "http://oss.sonatype.org/content/repositories/snapshots"
                              :snapshots true
                              :releases {:checksum :fail :update :always}}}
-  :aliases {"all" ["with-profile" "dev:dev,1.4:dev,1.6:dev,master:dev,cdj01x:dev,cdj02x"]}
+  :aliases {"all" ["with-profile" "dev:dev,1.4:dev,1.5:dev,master:dev,cdj01x:dev,cdj02x"]}
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
   :global-vars {*warn-on-reflection* true})
