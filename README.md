@@ -45,10 +45,12 @@ With Maven:
 
 ## Usage
 
-ClojureWerkz Support is a young library and until documentation guides are written,
-it may be challenging to use for anyone except the author. For code examples, see our test suite.
+ClojureWerkz Support is a young library and until documentation guides
+are written, it may be challenging to use for anyone except the
+author. For code examples, see our test suite.
 
-Once the library matures, we will update this document.
+Once the documentation is ready for the public, we will update this
+document.
 
 
 ## Continuous Integration
