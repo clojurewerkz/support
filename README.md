@@ -32,14 +32,14 @@ highly recommended.
 
 With Leiningen:
 
-    [clojurewerkz/support "0.19.0"]
+    [clojurewerkz/support "1.0.0"]
 
 With Maven:
 
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>support</artifactId>
-      <version>0.19.0</version>
+      <version>1.0.0</version>
     </dependency>
 
 
