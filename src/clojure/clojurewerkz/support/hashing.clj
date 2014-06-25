@@ -1,6 +1,6 @@
 (ns clojurewerkz.support.hashing
   (:require [clojurewerkz.support.internal :as i])
-  (:import [com.google.common.hash Hashing HashFunction HashCode]))
+  (:import [com.google.common.hash Hashing HashFunction HashCode Hasher]))
 
 ;;
 ;; API
@@ -17,19 +17,31 @@
 (extend-protocol Hashable
   String
   (sha1-of [^String s]
-    (.hashString sha1-fn s))
+    (let [^bytes bytes (.getBytes s "UTF-8")
+          ^Hasher hsr  (.newHasher sha1-fn)]
+      (-> hsr
+          (.putBytes ^bytes bytes)
+          .hash)))
   (md5-of [^String s]
-    (.hashString md5-fn s))
+    (let [^bytes bytes (.getBytes s "UTF-8")
+          ^Hasher hsr  (.newHasher md5-fn)]
+      (-> hsr
+          (.putBytes ^bytes bytes)
+          .hash)))
 
   Long
   (sha1-of [^Long l]
-    (.hashLong sha1-fn l))
+    (let [^Hasher hsr  (.newHasher sha1-fn)]
+      (-> hsr (.putLong l) .hash)))
   (md5-of [^Long l]
-    (.hashLong md5-fn l)))
+    (let [^Hasher hsr  (.newHasher md5-fn)]
+      (-> hsr (.putLong l) .hash))))
 
 (extend i/byte-array-type
   Hashable
   {:sha1-of (fn [^bytes bytes]
-              (.hashBytes sha1-fn bytes))
+              (let [^Hasher hsr  (.newHasher sha1-fn)]
+                (-> hsr (.putBytes bytes) .hash)))
    :md5-of (fn [^bytes bytes]
-             (.hashBytes md5-fn bytes))})
+             (let [^Hasher hsr  (.newHasher md5-fn)]
+               (-> hsr (.putBytes bytes) .hash)))})
