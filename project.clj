@@ -1,11 +1,11 @@
-(defproject clojurewerkz/support "0.21.0-SNAPSHOT"
+(defproject clojurewerkz/support "1.0.0-SNAPSHOT"
   :description "A support library ClojureWerkz projects (Langohr, Monger, Welle, Neocons, Elastisch, Quartzite, etc) can rely on"
   :min-lein-version "2.4.2"
   :url "http://github.com/clojurewerkz/support"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [com.google.guava/guava "16.0"]]
+                 [com.google.guava/guava "17.0"]]
   :profiles {:dev {:resource-paths ["test/resources"]
                    :dependencies   [[clj-time              "0.6.0"]
                                     [cheshire              "5.3.0"]]}
