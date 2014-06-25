@@ -21,8 +21,8 @@ and other [Clojure libraries](http://clojurewerkz.org) under the Clojurewerkz um
 
 ## Supported Clojure versions
 
-ClojureWerkz Support is built from the ground up for Clojure 1.3 and up. Clojure 1.4 is
-highly recommended.
+ClojureWerkz Support requires Clojure 1.4+. The most recent release
+is highly recommended.
 
 
 
