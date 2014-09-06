@@ -2,18 +2,17 @@
 
 This is a yet another support/utility library, targeted at use cases in
 
- * [Monger](https://github.com/michaelklishin/monger)
  * [Langohr](https://github.com/michaelklishin/langohr)
+ * [Elastisch](https://github.com/clojurewerkz/elastisch)
+ * [Cassaforte](https://github.com/clojurewerkz/cassaforte)
+ * [Monger](https://github.com/michaelklishin/monger)
  * [Neocons](https://github.com/michaelklishin/neocons)
  * [Welle](https://github.com/michaelklishin/welle)
  * [Validateur](https://github.com/michaelklishin/validateur)
- * [Cassaforte](https://github.com/clojurewerkz/cassaforte)
- * [Elastisch](https://github.com/clojurewerkz/elastisch)
+ * [Meltdown](https://github.com/clojurewerkz/meltdown)
  * [Quartzite](https://github.com/michaelklishin/quartzite)
- * [Urly](https://github.com/michaelklishin/urly)
  * [Pantomime](https://github.com/michaelklishin/pantomime)
  * [Mailer](https://github.com/clojurewerkz/mailer)
- * [Crawlista](https://github.com/michaelklishin/crawlista)
  * [Money](https://github.com/clojurewerkz/money)
 
 and other [Clojure libraries](http://clojurewerkz.org) under the Clojurewerkz umbrella.
@@ -32,14 +31,14 @@ is highly recommended.
 
 With Leiningen:
 
-    [clojurewerkz/support "1.0.0"]
+    [clojurewerkz/support "1.1.0"]
 
 With Maven:
 
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>support</artifactId>
-      <version>1.0.0</version>
+      <version>1.1.0</version>
     </dependency>
 
 
