@@ -11,6 +11,7 @@
                                     [cheshire              "5.3.1"]]}
              :1.4    {:dependencies [[org.clojure/clojure "1.4.0"]]}
              :1.5    {:dependencies [[org.clojure/clojure "1.5.1"]]}
+             :1.7    {:dependencies [[org.clojure/clojure "1.7.0-alpha2"]]}
              :master {:dependencies [[org.clojure/clojure "1.7.0-master-SNAPSHOT"]]}
              :cdj01x {:dependencies [[org.clojure/data.json "0.1.2"]]}
              :cdj02x {:dependencies [[org.clojure/data.json "0.2.4"]]}}
@@ -20,7 +21,7 @@
                  "sonatype-snapshots" {:url "http://oss.sonatype.org/content/repositories/snapshots"
                              :snapshots true
                              :releases {:checksum :fail :update :always}}}
-  :aliases {"all" ["with-profile" "dev:dev,1.4:dev,1.5:dev,master:dev,cdj01x:dev,cdj02x"]}
+  :aliases {"all" ["with-profile" "dev:dev,1.4:dev,1.5:dev,1.7:dev,master:dev,cdj01x:dev,cdj02x"]}
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
   :global-vars {*warn-on-reflection* true})
