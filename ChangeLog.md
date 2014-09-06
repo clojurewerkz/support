@@ -1,3 +1,20 @@
+## Changes between ClojureWerkz Support 1.0.0 and 1.1.0
+
+### Guava 18.0
+
+Support now depends on Guava version `18.0`.
+
+### Cheshire Update
+
+[Cheshire](https://github.com/dakrone/cheshire/) dependency
+has been upgraded to version `5.3.1`.
+
+### clj-time Update
+
+[clj-time](https://github.com/clj-time/clj-time/) dependency
+has been upgraded to version `0.8.0`.
+
+
 ## Changes between ClojureWerkz Support 0.20.0 and 1.0.0
 
 ### Clojure 1.6 By Default
