@@ -1,4 +1,4 @@
-(defproject clojurewerkz/support "1.1.0"
+(defproject clojurewerkz/support "1.2.0-SNAPSHOT"
   :description "A support library ClojureWerkz projects (Langohr, Monger, Welle, Neocons, Elastisch, Quartzite, etc) can rely on"
   :min-lein-version "2.4.3"
   :url "http://github.com/clojurewerkz/support"
