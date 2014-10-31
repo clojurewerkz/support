@@ -11,7 +11,7 @@
                                     [cheshire              "5.3.1"]]}
              :1.4    {:dependencies [[org.clojure/clojure "1.4.0"]]}
              :1.5    {:dependencies [[org.clojure/clojure "1.5.1"]]}
-             :1.7    {:dependencies [[org.clojure/clojure "1.7.0-alpha2"]]}
+             :1.7    {:dependencies [[org.clojure/clojure "1.7.0-alpha3"]]}
              :master {:dependencies [[org.clojure/clojure "1.7.0-master-SNAPSHOT"]]}
              :cdj01x {:dependencies [[org.clojure/data.json "0.1.2"]]}
              :cdj02x {:dependencies [[org.clojure/data.json "0.2.4"]]}}
