@@ -1,6 +1,6 @@
 (defproject clojurewerkz/support "1.2.0-SNAPSHOT"
   :description "A support library ClojureWerkz projects (Langohr, Monger, Welle, Neocons, Elastisch, Quartzite, etc) can rely on"
-  :min-lein-version "2.5.0"
+  :min-lein-version "2.5.1"
   :url "http://github.com/clojurewerkz/support"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
