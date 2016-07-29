@@ -5,7 +5,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [com.google.guava/guava "18.0"]]
+                 [com.google.guava/guava "19.0"]]
   :profiles {:dev {:resource-paths ["test/resources"]
                    :dependencies   [[clj-time              "0.8.0"]
                                     [cheshire              "5.3.1"]]}
