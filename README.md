@@ -20,7 +20,7 @@ and other [Clojure libraries](http://clojurewerkz.org) under the Clojurewerkz um
 
 ## Supported Clojure versions
 
-ClojureWerkz Support requires Clojure 1.4+. The most recent release
+ClojureWerkz Support requires Clojure 1.8+. The most recent release
 is highly recommended.
 
 
@@ -31,14 +31,14 @@ is highly recommended.
 
 With Leiningen:
 
-    [clojurewerkz/support "1.1.0"]
+    [clojurewerkz/support "1.5.0"]
 
 With Maven:
 
     <dependency>
       <groupId>clojurewerkz</groupId>
       <artifactId>support</artifactId>
-      <version>1.1.0</version>
+      <version>1.5.0</version>
     </dependency>
 
 
@@ -75,6 +75,6 @@ a pull request on Github.
 
 ## License
 
-Copyright © 2012-2016 Michael S. Klishin, Alex Petrov
+Copyright © 2012-2019 Michael S. Klishin, Alex Petrov
 
 Distributed under the Eclipse Public License, the same as Clojure.
