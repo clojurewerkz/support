@@ -1,3 +1,10 @@
+## Changes between ClojureWerkz Support 1.1.0 and 1.5.0
+
+### Guava 21.0
+
+Support now depends on Guava version `21.0`.
+
+
 ## Changes between ClojureWerkz Support 1.0.0 and 1.1.0
 
 ### Guava 18.0
