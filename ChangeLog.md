@@ -4,6 +4,10 @@
 
 Support now depends on Guava version `21.0`.
 
+### Clojure 1.9 By Default
+
+Support now depends on `org.clojure/clojure` version `1.9.0`.
+
 
 ## Changes between ClojureWerkz Support 1.0.0 and 1.1.0
 
