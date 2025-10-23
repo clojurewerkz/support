@@ -12,7 +12,9 @@
              :1.8    {:dependencies [[org.clojure/clojure "1.8.0"]]}
              :master {:dependencies [[org.clojure/clojure "1.10.0"]]}
              :cdj01x {:dependencies [[org.clojure/data.json "0.1.2"]]}
-             :cdj02x {:dependencies [[org.clojure/data.json "2.5.1"]]
+             :cdj02x {:dependencies [[org.clojure/data.json "0.2.4"]]
+                      :test-paths   ["cdjtest"]}
+             :cdj2x  {:dependencies [[org.clojure/data.json "2.5.1"]]
                       :test-paths   ["cdjtest"]}}
   :repositories {"sonatype" {:url "http://oss.sonatype.org/content/repositories/releases"
                              :snapshots false
@@ -20,7 +22,7 @@
                  "sonatype-snapshots" {:url "http://oss.sonatype.org/content/repositories/snapshots"
                              :snapshots true
                              :releases {:checksum :fail :update :always}}}
-  :aliases {"all" ["with-profile" "dev:dev,1.8:dev,master:dev,cdj01x:dev,cdj02x"]}
+  :aliases {"all" ["with-profile" "dev:dev,1.8:dev,master:dev,cdj01x:dev,cdj02x:dev,cdj2x"]}
   :source-paths ["src/clojure"]
   :java-source-paths ["src/java"]
   :global-vars {*warn-on-reflection* true})
