@@ -43,12 +43,18 @@
               ;; now try extending clojure.data.json 0.2.x protocol
               (extend-protocol clojure.data.json/JSONWriter
                 org.joda.time.DateTime
-                (-write [^DateTime object out]
-                  (clojure.data.json/write (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out))
+                (-write
+                  ([^DateTime object out]
+                   (clojure.data.json/write (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out))
+                  ([^DateTime object out _options]
+                   (clojure.data.json/write (.print (ISODateTimeFormat/dateTime) ^ReadableInstant object) out)))
 
                 java.util.Date
-                (-write [^java.util.Date object out]
-                  (clojure.data.json/write (DateTime. object (DateTimeZone/UTC)) out)))
+                (-write
+                  ([^java.util.Date object out]
+                   (clojure.data.json/write (DateTime. object (DateTimeZone/UTC)) out))
+                  ([^java.util.Date object out _]
+                   (clojure.data.json/write (DateTime. object (DateTimeZone/UTC)) out))))
               (catch Throwable _
                 false))
             (comment "Nothing to do, clojure.data.json is not available"))
