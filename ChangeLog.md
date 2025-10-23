@@ -1,6 +1,8 @@
 ## Changes between ClojureWerkz Support 1.5.0 and 1.6.0 (unreleased)
 
-No changes yet.
+## clojure.data.json
+
+Fix implementation of `clojure.data.json.JSONWriter/-write`
 
 ## Changes between ClojureWerkz Support 1.1.0 and 1.5.0
 
